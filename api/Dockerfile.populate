@@ -1,0 +1,16 @@
+FROM python:3.8.13 as base
+
+ENV PYTHONPATH=$PYTHONPATH:/api
+
+COPY ./requirements.txt /api/requirements.txt
+
+WORKDIR /api
+
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+COPY ./ /api
+CMD ls -al
+
+FROM base as build
+
+CMD python /api/populate_db.py

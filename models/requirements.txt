@@ -1,0 +1,23 @@
+# Visual / Util
+Pillow==9.3.0
+
+# Testing
+pytest==7.1.1
+
+# Infra / Redis
+redis==4.1.4
+
+# ML / Deep Learning
+tensorflow==2.13.1
+protobuf==3.20.3  # Compatible con TF 2.13
+scikit-learn==1.2.2
+xgboost
+
+# Data
+pandas==1.5.3
+numpy==1.24.3  # Compatible con TF y joblib pickles
+
+# Utils
+joblib==1.2.0
+pyarrow
+
